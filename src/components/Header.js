@@ -1,14 +1,18 @@
+import Link from 'next/link';
+
 export default function Header() {
-    return (
-      <header style={{ textAlign: 'center', padding: '2rem 1rem', background: '#fff' }}>
-        <h1>Kandula Dilip Kumar</h1>
-        <p>Full Stack Developer | Node.js | React | Express | MongoDB</p>
-        <nav style={{ marginTop: '1rem' }}>
-          <a href="#projects" style={{ margin: '0 1rem' }}>Projects</a>
-          <a href="/about" style={{ margin: '0 1rem' }}>About</a>
-          <a href="/contact" style={{ margin: '0 1rem' }}>Contact</a>
+  return (
+    <header className="bg-gray-900 text-white p-4 shadow-md">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-xl font-bold">Dilip Kumar</h1>
+        <nav className="space-x-4">
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/resume">Resume</Link>
+          <Link href="/works">Works</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
-      </header>
-    );
-  }
-  
+      </div>
+    </header>
+  );
+}

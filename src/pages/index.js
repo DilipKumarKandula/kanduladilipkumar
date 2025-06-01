@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
 
       <main style={styles.main}>
-        <h2 style={styles.title}>Hi, I'm Kandula Dilip Kumar</h2>
+        <h2 style={styles.title}>Kandula Dilip Kumar</h2>
         <p style={styles.summary}>
           A dedicated and detail-oriented Full Stack Developer specializing in building modern, scalable web applications. 
           With hands-on experience in <strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, and <strong>Express.js</strong>, 

@@ -137,7 +137,7 @@ export default function Contact() {
                 <a href="https://www.linkedin.com/in/dilipkumarkandula" target="_blank" rel="noopener noreferrer" style={styles.link}>LinkedIn</a>
               </li>
               <li style={styles.linkItem}>
-                <a href="mailto:kanduladilipkumar@example.com" style={styles.link}>Email Me</a>
+                {/* <a href="mailto:kanduladilipkumar@example.com" style={styles.link}>Email Me</a> */}
               </li>
             </ul>
           </div>

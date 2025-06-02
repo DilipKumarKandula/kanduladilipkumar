@@ -1,5 +1,7 @@
+// pages/contact.js
 import Head from 'next/head';
 import Header from '@/components/Header';
+import { useState } from 'react';
 
 export default function Contact() {
   const styles = {
@@ -45,7 +47,8 @@ export default function Contact() {
       border: '1px solid #d1d5db',
       borderRadius: '0.375rem',
       fontSize: '1rem',
-      backgroundColor: '#ffffff',
+      backgroundColor: '#ffffff', // white background
+      color: '#000000',           // black text
     },
     textarea: {
       padding: '0.5rem',
@@ -53,8 +56,10 @@ export default function Contact() {
       borderRadius: '0.375rem',
       fontSize: '1rem',
       resize: 'vertical',
-      backgroundColor: '#ffffff',
+      backgroundColor: '#ffffff', // white background
+      color: '#000000',           // black text
     },
+    
     button: {
       backgroundColor: '#2563eb',
       color: 'white',
@@ -94,6 +99,45 @@ export default function Contact() {
       color: '#2563eb',
       textDecoration: 'none',
     },
+    responseMsg: {
+      marginTop: '1rem',
+      fontWeight: '600',
+    },
+  };
+
+  // Form state and handlers
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [responseMsg, setResponseMsg] = useState('');
+  const [error, setError] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setResponseMsg('');
+    setError('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setResponseMsg(data.message);
+        setFormData({ name: '', email: '', message: '' }); // reset form
+      } else {
+        setError(data.message || 'Failed to send message');
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again later.');
+      console.error('Form submission error:', err);
+    }
   };
 
   return (
@@ -110,17 +154,50 @@ export default function Contact() {
         </p>
 
         <div style={styles.container}>
-          <form style={styles.form}>
+          <form style={styles.form} onSubmit={handleSubmit}>
             <label htmlFor="name" style={styles.label}>Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required style={styles.input} />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+              style={styles.input}
+              className="custom-placeholder"
+              value={formData.name}
+              onChange={handleChange}
+            />
 
             <label htmlFor="email" style={styles.label}>Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required style={styles.input} />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              style={styles.input}
+              className="custom-placeholder"
+              value={formData.email}
+              onChange={handleChange}
+            />
 
             <label htmlFor="message" style={styles.label}>Message</label>
-            <textarea id="message" name="message" placeholder="Write your message..." rows="6" required style={styles.textarea} />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message..."
+              rows="6"
+              required
+              style={styles.textarea}
+              className="custom-placeholder"
+              value={formData.message}
+              onChange={handleChange}
+            />
 
             <button type="submit" style={styles.button}>Send Message</button>
+
+            {responseMsg && <p style={{ ...styles.responseMsg, color: 'green' }}>{responseMsg}</p>}
+            {error && <p style={{ ...styles.responseMsg, color: 'red' }}>{error}</p>}
           </form>
 
           <div style={styles.info}>
@@ -136,13 +213,19 @@ export default function Contact() {
               <li style={styles.linkItem}>
                 <a href="https://www.linkedin.com/in/dilipkumarkandula" target="_blank" rel="noopener noreferrer" style={styles.link}>LinkedIn</a>
               </li>
-              <li style={styles.linkItem}>
-                {/* <a href="mailto:kanduladilipkumar@example.com" style={styles.link}>Email Me</a> */}
-              </li>
             </ul>
           </div>
         </div>
       </main>
+
+      <style jsx>{`
+        .custom-placeholder::placeholder {
+          color: #4b5563; /* Tailwind gray-600 */
+        }
+        button:hover {
+          background-color: #1d4ed8; /* Slightly darker blue on hover */
+        }
+      `}</style>
     </>
   );
 }

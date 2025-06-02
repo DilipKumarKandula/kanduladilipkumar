@@ -1,3 +1,4 @@
+// src/pages/about.js
 import Header from '../components/Header';
 
 export default function About() {
@@ -25,7 +26,7 @@ export default function About() {
         </p>
 
         <p style={{ fontSize: '1.125rem', color: '#4a5568', marginBottom: '1rem' }}>
-          I approach development with a problem-solving mindset, continuously refining features to enhance usability and performance. I'm always eager to explore new technologies and improve my skills to build high-quality applications that are both functional and visually engaging.
+          I approach development with a problem-solving mindset, continuously refining features to enhance usability and performance. I&apos;m always eager to explore new technologies and improve my skills to build high-quality applications that are both functional and visually engaging.
         </p>
 
         <h3

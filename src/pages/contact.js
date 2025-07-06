@@ -211,7 +211,8 @@ export default function Contact() {
                 <a href="https://github.com/DilipKumarKandula" target="_blank" rel="noopener noreferrer" style={styles.link}>GitHub</a>
               </li>
               <li style={styles.linkItem}>
-                <a href="https://www.linkedin.com/in/dilipkumarkandula" target="_blank" rel="noopener noreferrer" style={styles.link}>LinkedIn</a>
+                <a href="www.linkedin.com/in/
+kandula-dilip-kumar-94b20a221" target="_blank" rel="noopener noreferrer" style={styles.link}>LinkedIn</a>
               </li>
             </ul>
           </div>

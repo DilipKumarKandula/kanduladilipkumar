@@ -210,10 +210,9 @@ export default function Contact() {
               <li style={styles.linkItem}>
                 <a href="https://github.com/DilipKumarKandula" target="_blank" rel="noopener noreferrer" style={styles.link}>GitHub</a>
               </li>
-              <li style={styles.linkItem}>
-                <a href="www.linkedin.com/in/
-kandula-dilip-kumar-94b20a221" target="_blank" rel="noopener noreferrer" style={styles.link}>LinkedIn</a>
-              </li>
+              {/* <li style={styles.linkItem}>
+                <a href="www.linkedin.com/in/kandula-dilip-kumar-94b20a221" target="_blank" rel="noopener noreferrer" style={styles.link}>LinkedIn</a>
+              </li> */}
             </ul>
           </div>
         </div>

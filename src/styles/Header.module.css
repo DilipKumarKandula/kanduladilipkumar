@@ -1,6 +1,6 @@
-/* Header.module.css */
+/* Header.module.css
 .header {
-    background-color: #f0ecec; /* dark gray */
+    background-color: #f0ecec; 
     color: rgb(8, 8, 8);
     padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -31,6 +31,6 @@
   }
   
   .link:hover {
-    color: #1d6cd3; /* light gray */
+    color: #1d6cd3; 
   }
-  
+   */

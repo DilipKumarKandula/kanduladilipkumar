@@ -67,9 +67,6 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-
-
-
           </motion.div>
         ))}
       </div>

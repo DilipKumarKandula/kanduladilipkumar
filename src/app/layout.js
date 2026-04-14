@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <Navbar />
 
         {/* KEY: pushes footer down */}
-        <main className="flex-1 pt-20">
+        <main className="flex-1 pt-17">
           {children}
         </main>
 

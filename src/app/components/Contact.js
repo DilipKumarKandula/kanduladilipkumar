@@ -165,7 +165,6 @@ export default function Contact() {
 
         <p className="mt-3 text-gray-500 text-center text-sm sm:text-base">
           Open to full-time and freelance opportunities. I usually respond within 24 hours.
-          
         </p>
 
         {/* Success Message */}
@@ -190,7 +189,7 @@ export default function Contact() {
               onChange={handleChange}
               placeholder="Enter your name"
               required
-              className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+               className="px-4 py-3 rounded-lg border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 
@@ -207,7 +206,7 @@ export default function Contact() {
               onChange={handleChange}
               placeholder="Enter your email"
               required
-              className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-3 rounded-lg border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 
@@ -224,7 +223,7 @@ export default function Contact() {
               placeholder="Write your message..."
               rows="5"
               required
-              className="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+               className="px-4 py-3 rounded-lg border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 

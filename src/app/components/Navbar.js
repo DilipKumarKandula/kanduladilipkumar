@@ -72,10 +72,10 @@ export default function Navbar() {
 
         {/* Links */}
         <div className="hidden md:flex gap-8 text-sm text-gray-300">
-          <Link href="/#projects">Projects</Link>
+          {/* <Link href="/#projects">Projects</Link>
           <Link href="/#skills">Skills</Link>
           <Link href="/#experience">Experience</Link>
-          <Link href="/#insights">Insights</Link>
+          <Link href="/#insights">Insights</Link> */}
         </div>
 
         {/* ONLY CTA */}

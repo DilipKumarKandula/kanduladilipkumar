@@ -165,6 +165,7 @@ export default function Contact() {
 
         <p className="mt-3 text-gray-500 text-center text-sm sm:text-base">
           Open to full-time and freelance opportunities. I usually respond within 24 hours.
+          
         </p>
 
         {/* Success Message */}

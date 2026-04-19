@@ -76,6 +76,7 @@
 // }
 
 
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -101,7 +102,7 @@ export default function Projects() {
       >
         {/* Title */}
         <h3 className="text-2xl font-semibold text-slate-900">
-          Gamified LMS Platform
+           LMS Platform and Gamified Learning Platfrom
         </h3>
 
         {/* Company Tag */}

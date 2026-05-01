@@ -217,7 +217,7 @@ export default function Hero() {
             className="relative h-[360px] sm:h-[480px] w-full max-w-[420px]"
           >
             <Image
-              src="/profile.jpeg"
+              src="/profile.pnd"
               alt="Dilip Kumar"
               fill
               className="object-contain drop-shadow-2xl

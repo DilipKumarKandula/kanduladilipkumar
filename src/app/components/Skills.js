@@ -82,78 +82,206 @@
 
 
 
+// "use client";
+
+// import { motion } from "framer-motion";
+// import {
+//   FaReact,
+//   FaNodeJs,
+//   FaGitAlt,
+//   FaGithub,
+// } from "react-icons/fa";
+// import {
+//   SiNextdotjs,
+//   SiTailwindcss,
+//   SiJavascript,
+//   SiExpress,
+//   SiMysql,
+// } from "react-icons/si";
+// import { MdOutlineDeveloperMode } from "react-icons/md";
+
+// const skills = [
+//   { name: "React", icon: <FaReact /> },
+//   { name: "Next.js", icon: <SiNextdotjs /> },
+//   { name: "JavaScript", icon: <SiJavascript /> },
+//   { name: "Tailwind", icon: <SiTailwindcss /> },
+//   { name: "Node.js", icon: <FaNodeJs /> },
+//   { name: "Express", icon: <SiExpress /> },
+//   { name: "MySQL", icon: <SiMysql /> },
+//   { name: "Git", icon: <FaGitAlt /> },
+//   { name: "GitHub", icon: <FaGithub /> },
+//   { name: "DevTools", icon: <MdOutlineDeveloperMode /> },
+// ];
+
+// export default function Skills() {
+//   return (
+//     <section className="px-6 max-w-5xl mx-auto mt-32 mb-32 text-center">
+
+//       {/* Heading */}
+//       <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight">
+//         Tech I Work With
+//       </h2>
+
+//       <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+//         A focused stack for building fast, scalable, and modern web applications.
+//       </p>
+
+//       {/* Floating Skills */}
+//       <div className="mt-16 flex flex-wrap justify-center gap-4">
+
+//         {skills.map((skill, i) => (
+//           <motion.div
+//             key={i}
+//             initial={{ opacity: 0, y: 20 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             whileHover={{ scale: 1.1 }}
+//             transition={{ duration: 0.3 }}
+//             className="flex items-center gap-2 px-5 py-2 rounded-full 
+//             bg-white/5 border border-white/10 backdrop-blur-md
+//             text-gray-300 hover:text-white hover:border-orange-400
+//             transition cursor-default"
+//           >
+//             <span className="text-orange-400 text-lg">
+//               {skill.icon}
+//             </span>
+//             <span className="text-sm font-medium">
+//               {skill.name}
+//             </span>
+//           </motion.div>
+//         ))}
+
+//       </div>
+
+//       {/* Bottom subtle line */}
+//       {/* <div className="mt-20 h-px w-full bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div> */}
+
+//     </section>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 "use client";
 
 import { motion } from "framer-motion";
+
 import {
   FaReact,
   FaNodeJs,
   FaGitAlt,
   FaGithub,
+  FaJava,
 } from "react-icons/fa";
+
 import {
   SiNextdotjs,
   SiTailwindcss,
   SiJavascript,
   SiExpress,
   SiMysql,
+  SiSpringboot,
+  SiOpenai,
+  SiTypescript 
 } from "react-icons/si";
+
 import { MdOutlineDeveloperMode } from "react-icons/md";
 
 const skills = [
   { name: "React", icon: <FaReact /> },
   { name: "Next.js", icon: <SiNextdotjs /> },
+
   { name: "JavaScript", icon: <SiJavascript /> },
-  { name: "Tailwind", icon: <SiTailwindcss /> },
+  { name: "TypeScript", icon: <SiTypescript /> },
+
+  { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+
   { name: "Node.js", icon: <FaNodeJs /> },
-  { name: "Express", icon: <SiExpress /> },
+  { name: "Express.js", icon: <SiExpress /> },
   { name: "MySQL", icon: <SiMysql /> },
+
+  { name: "Java", icon: <FaJava /> },
+  { name: "Spring Boot", icon: <SiSpringboot /> },
+
+  { name: "OpenAI API", icon: <SiOpenai /> },
+
   { name: "Git", icon: <FaGitAlt /> },
   { name: "GitHub", icon: <FaGithub /> },
+
   { name: "DevTools", icon: <MdOutlineDeveloperMode /> },
 ];
 
 export default function Skills() {
   return (
-    <section className="px-6 max-w-5xl mx-auto mt-32 mb-32 text-center">
+    <section className="px-6 max-w-6xl mx-auto py-14 text-center">
 
       {/* Heading */}
-      <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight">
-        Tech I Work With
-      </h2>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
 
-      <p className="mt-4 text-gray-400 max-w-xl mx-auto">
-        A focused stack for building fast, scalable, and modern web applications.
-      </p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+          Skills & Technologies
+        </h2>
 
-      {/* Floating Skills */}
+        <p className="mt-5 text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          Technologies and tools I use to build scalable,
+          production-ready, and AI-powered web applications.
+        </p>
+
+      </motion.div>
+
+      {/* Skills */}
       <div className="mt-16 flex flex-wrap justify-center gap-4">
 
         {skills.map((skill, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-            className="flex items-center gap-2 px-5 py-2 rounded-full 
-            bg-white/5 border border-white/10 backdrop-blur-md
-            text-gray-300 hover:text-white hover:border-orange-400
-            transition cursor-default"
+            whileHover={{ y: -2 }}
+            transition={{ duration: 0.25 }}
+            viewport={{ once: true }}
+            className="
+              flex items-center gap-2
+              px-5 py-3
+              rounded-full
+              bg-white/5
+              border border-white/10
+              text-gray-300
+              hover:text-white
+              hover:border-orange-500/30
+              hover:bg-white/10
+              transition-all duration-300
+              cursor-default
+            "
           >
+
             <span className="text-orange-400 text-lg">
               {skill.icon}
             </span>
+
             <span className="text-sm font-medium">
               {skill.name}
             </span>
+
           </motion.div>
         ))}
 
       </div>
-
-      {/* Bottom subtle line */}
-      {/* <div className="mt-20 h-px w-full bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div> */}
 
     </section>
   );

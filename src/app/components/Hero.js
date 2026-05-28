@@ -124,11 +124,11 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-center px-6 py-20 overflow-hidden bg-gradient-to-b from-white to-slate-50">
 
       {/* BACKGROUND TEXT */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.03]">
+      {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.05]">
         <h1 className="text-[22vw] font-bold text-black leading-none">
           DEVELOPER
         </h1>
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center relative z-10">
 
@@ -142,7 +142,7 @@ export default function Hero() {
           >
             {/* Tagline */}
             <p className="text-orange-500 font-mono tracking-widest text-sm uppercase font-bold">
-              Full Stack Developer · 2+ Years Experience
+              Full Stack Developer · 3+ Years Experience
             </p>
 
             {/* Name */}
@@ -152,15 +152,15 @@ export default function Hero() {
 
             {/* Value Statement */}
             <p className="text-gray-600 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              I build scalable LMS platforms and high-performance web applications
-              using React, Next.js, and Node.js.
+        Full Stack Developer focused on scalable architectures,
+        AI integrations, and high-performance user experiences.
             </p>
 
             {/* Trust Signals */}
             <div className="flex flex-col gap-2 text-sm text-gray-500">
-            <p>✔ Built real-world production applications</p>
-            <p>✔ Developed REST APIs & full-stack systems</p>
-            <p>✔ Focused on performance & scalability</p>
+            <p>✔ Built production-grade LMS & admin dashboards</p>
+            <p>✔ Developed AI-driven content automation workflows</p>
+            <p>✔ Designed scalable APIs, RBAC & database systems</p>
             </div>
 
             {/* CTA BUTTONS */}
@@ -177,7 +177,7 @@ export default function Hero() {
               </motion.a>
 
               {/* Resume */}
-              <motion.a
+              {/* <motion.a
                 href="/resume/Kandula_Dilip_Kumar_Resume.pdf"
                 target="_blank"
                 whileHover={{ scale: 1.05 }}
@@ -185,7 +185,7 @@ export default function Hero() {
                 className="px-8 py-4 border border-slate-300 text-slate-900 rounded-full font-bold hover:bg-slate-100 transition"
               >
                 View Resume
-              </motion.a>
+              </motion.a> */}
 
             </div>
 
@@ -206,7 +206,8 @@ export default function Hero() {
             animate={{ rotate: 12 }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
               w-[280px] h-[320px] sm:w-[380px] sm:h-[420px] 
-              bg-orange-100 rounded-[2rem] -z-10"
+              bg-gradient-to-br from-orange-400/20 to-red-500/20
+backdrop-blur rounded-[2rem] -z-10"
           />
 
           {/* Image */}
